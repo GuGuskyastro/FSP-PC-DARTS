@@ -1,0 +1,274 @@
+2026-05-18 10:58:31,573 gpu device = 0
+2026-05-18 10:58:31,573 args = Namespace(data='../data', set='cifar10', batch_size=256, learning_rate=0.1, learning_rate_min=0.001, momentum=0.9, weight_decay=0.0003, report_freq=50, gpu=0, epochs=26, init_channels=16, layers=8, model_path='saved_models', cutout=False, cutout_length=16, drop_path_prob=0.3, save='search-ablation/interval_new_1/seed_501/a0p05_b0p01_cand20_int6_seed501-20260518-105829', seed=501, grad_clip=5, train_portion=0.5, unrolled=False, arch_learning_rate=0.0006, arch_weight_decay=0.001, fsp_hook_enable=True, fsp_start_epoch=16, fsp_interval_epochs=6, fsp_num_candidates=20, fsp_subset_num_folds=5, fsp_adv_ft_epochs=5, fsp_lambda_alpha=0.05, fsp_lambda_beta=0.01, fsp_eval_steps=7)
+2026-05-18 10:58:31,879 param size = 0.299578MB
+2026-05-18 10:58:32,712 epoch 0 lr 9.927949e-02
+2026-05-18 10:58:32,770 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 10:58:35,943 train 000 2.324469e+00 8.203125 44.140625
+2026-05-18 10:58:53,749 train 050 1.849963e+00 29.779412 83.126532
+2026-05-18 10:59:10,711 train_acc 33.672000
+2026-05-18 10:59:10,883 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 10:59:10,885 epoch 1 lr 9.749592e-02
+2026-05-18 10:59:10,886 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 10:59:11,530 train 000 1.518358e+00 42.968750 92.187500
+2026-05-18 10:59:29,340 train 050 1.498866e+00 44.018076 91.904105
+2026-05-18 10:59:45,977 train_acc 46.624000
+2026-05-18 10:59:46,227 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 10:59:46,230 epoch 2 lr 9.503740e-02
+2026-05-18 10:59:46,231 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 10:59:46,782 train 000 1.325697e+00 50.390625 92.187500
+2026-05-18 11:00:04,566 train 050 1.271712e+00 54.136029 94.584865
+2026-05-18 11:00:21,254 train_acc 55.176000
+2026-05-18 11:00:21,414 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:00:21,417 epoch 3 lr 9.193968e-02
+2026-05-18 11:00:21,418 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:00:21,970 train 000 1.122584e+00 56.250000 96.093750
+2026-05-18 11:00:39,742 train 050 1.120829e+00 59.604779 96.116728
+2026-05-18 11:00:56,409 train_acc 59.972000
+2026-05-18 11:00:56,567 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:00:56,570 epoch 4 lr 8.824779e-02
+2026-05-18 11:00:56,571 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:00:57,137 train 000 1.086679e+00 64.453125 96.875000
+2026-05-18 11:01:15,135 train 050 1.016968e+00 63.288909 96.859681
+2026-05-18 11:01:31,793 train_acc 63.400000
+2026-05-18 11:01:31,955 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:01:31,955 epoch 5 lr 8.401546e-02
+2026-05-18 11:01:31,956 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:01:32,503 train 000 8.923247e-01 66.015625 97.265625
+2026-05-18 11:01:50,479 train 050 9.517099e-01 65.992647 97.081801
+2026-05-18 11:02:07,294 train_acc 65.812000
+2026-05-18 11:02:07,453 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:02:07,454 epoch 6 lr 7.930427e-02
+2026-05-18 11:02:07,454 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:02:07,997 train 000 9.314222e-01 68.359375 97.265625
+2026-05-18 11:02:25,828 train 050 9.010657e-01 67.570466 97.464767
+2026-05-18 11:02:42,649 train_acc 68.120000
+2026-05-18 11:02:42,807 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:02:42,808 epoch 7 lr 7.418278e-02
+2026-05-18 11:02:42,808 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:02:43,358 train 000 9.129459e-01 66.796875 97.656250
+2026-05-18 11:03:01,166 train 050 8.560275e-01 69.079350 97.909007
+2026-05-18 11:03:17,930 train_acc 69.308000
+2026-05-18 11:03:18,183 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:03:18,184 epoch 8 lr 6.872551e-02
+2026-05-18 11:03:18,184 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:03:18,727 train 000 7.422151e-01 73.046875 97.656250
+2026-05-18 11:03:36,562 train 050 8.205338e-01 70.572917 97.931985
+2026-05-18 11:03:53,232 train_acc 70.700000
+2026-05-18 11:03:53,392 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:03:53,393 epoch 9 lr 6.301188e-02
+2026-05-18 11:03:53,393 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:03:53,939 train 000 7.619803e-01 72.656250 99.218750
+2026-05-18 11:04:11,812 train 050 7.849872e-01 71.637561 98.215380
+2026-05-18 11:04:28,530 train_acc 71.852000
+2026-05-18 11:04:28,690 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:04:28,694 epoch 10 lr 5.712501e-02
+2026-05-18 11:04:28,694 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:04:29,248 train 000 8.639606e-01 72.265625 96.484375
+2026-05-18 11:04:47,045 train 050 7.625693e-01 72.870711 98.314951
+2026-05-18 11:05:03,802 train_acc 73.424000
+2026-05-18 11:05:03,962 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:05:03,965 epoch 11 lr 5.115052e-02
+2026-05-18 11:05:03,966 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:05:04,529 train 000 7.202072e-01 73.046875 98.437500
+2026-05-18 11:05:22,357 train 050 7.113272e-01 74.747243 98.575368
+2026-05-18 11:05:38,999 train_acc 74.756000
+2026-05-18 11:05:39,251 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:05:39,254 epoch 12 lr 4.517526e-02
+2026-05-18 11:05:39,254 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:05:39,803 train 000 6.801921e-01 75.781250 99.218750
+2026-05-18 11:05:57,598 train 050 6.761002e-01 75.842525 98.805147
+2026-05-18 11:06:14,382 train_acc 75.832000
+2026-05-18 11:06:14,542 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:06:14,545 epoch 13 lr 3.928606e-02
+2026-05-18 11:06:14,545 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:06:15,099 train 000 6.920456e-01 75.781250 98.437500
+2026-05-18 11:06:32,908 train 050 6.482868e-01 76.723346 98.950674
+2026-05-18 11:06:49,724 train_acc 76.676000
+2026-05-18 11:06:49,883 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:06:49,886 epoch 14 lr 3.356840e-02
+2026-05-18 11:06:49,887 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:06:50,435 train 000 6.576754e-01 75.781250 98.437500
+2026-05-18 11:07:08,285 train 050 6.221445e-01 77.864583 99.011949
+2026-05-18 11:07:25,129 train_acc 77.964000
+2026-05-18 11:07:25,288 Final Genotype: Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:07:25,292 epoch 15 lr 2.810517e-02
+2026-05-18 11:07:25,292 genotype = Genotype(normal=[('max_pool_3x3', 1), ('skip_connect', 0), ('avg_pool_3x3', 1), ('skip_connect', 2), ('skip_connect', 1), ('dil_conv_3x3', 0), ('dil_conv_3x3', 3), ('max_pool_3x3', 2)], normal_concat=range(2, 6), reduce=[('skip_connect', 1), ('avg_pool_3x3', 0), ('dil_conv_5x5', 2), ('skip_connect', 0), ('dil_conv_5x5', 0), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:07:25,865 ARCH STEP | Δalpha=0.000600 Δbeta=0.000600
+2026-05-18 11:07:26,208 train 000 5.200388e-01 81.640625 99.218750
+2026-05-18 11:08:00,727 ARCH STEP | Δalpha=0.000255 Δbeta=0.000160
+2026-05-18 11:08:01,076 train 050 5.935297e-01 78.975184 99.134498
+2026-05-18 11:08:33,859 train_acc 78.892000
+2026-05-18 11:08:34,019 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_3x3', 1), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 3), ('max_pool_3x3', 2), ('sep_conv_5x5', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:08:34,022 epoch 16 lr 2.297538e-02
+2026-05-18 11:08:34,022 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_3x3', 1), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 3), ('max_pool_3x3', 2), ('sep_conv_5x5', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:08:34,565 ARCH STEP | Δalpha=0.000285 Δbeta=0.000396
+2026-05-18 11:08:34,909 train 000 6.428140e-01 81.250000 98.437500
+2026-05-18 11:09:09,595 ARCH STEP | Δalpha=0.000279 Δbeta=0.000377
+2026-05-18 11:09:09,941 train 050 5.763239e-01 79.557292 99.172794
+2026-05-18 11:09:42,599 train_acc 79.772000
+2026-05-18 11:09:42,600 [FSP-HOOK] start epoch=16
+2026-05-18 11:09:43,766 [FSP-HOOK] evaluating sampled candidate 1/20 score=0.659285
+2026-05-18 11:10:45,907 [FSP-HOOK] candidate 1 fsp=1.665186 adv_acc=5.2100
+2026-05-18 11:10:45,909 [FSP-HOOK] evaluating sampled candidate 2/20 score=0.657705
+2026-05-18 11:11:45,740 [FSP-HOOK] candidate 2 fsp=0.972195 adv_acc=3.7400
+2026-05-18 11:11:45,741 [FSP-HOOK] evaluating sampled candidate 3/20 score=0.658482
+2026-05-18 11:12:46,963 [FSP-HOOK] candidate 3 fsp=0.396197 adv_acc=4.9900
+2026-05-18 11:12:46,965 [FSP-HOOK] evaluating sampled candidate 4/20 score=0.658623
+2026-05-18 11:13:47,457 [FSP-HOOK] candidate 4 fsp=0.278621 adv_acc=5.3100
+2026-05-18 11:13:47,459 [FSP-HOOK] evaluating sampled candidate 5/20 score=0.658855
+2026-05-18 11:14:48,773 [FSP-HOOK] candidate 5 fsp=1.601074 adv_acc=5.7000
+2026-05-18 11:14:48,775 [FSP-HOOK] evaluating sampled candidate 6/20 score=0.658560
+2026-05-18 11:15:49,679 [FSP-HOOK] candidate 6 fsp=1.274733 adv_acc=5.5200
+2026-05-18 11:15:49,681 [FSP-HOOK] evaluating sampled candidate 7/20 score=0.659129
+2026-05-18 11:16:52,133 [FSP-HOOK] candidate 7 fsp=8.609274 adv_acc=10.1000
+2026-05-18 11:16:52,135 [FSP-HOOK] evaluating sampled candidate 8/20 score=0.658108
+2026-05-18 11:17:53,845 [FSP-HOOK] candidate 8 fsp=0.372722 adv_acc=6.7200
+2026-05-18 11:17:53,847 [FSP-HOOK] evaluating sampled candidate 9/20 score=0.658561
+2026-05-18 11:18:55,303 [FSP-HOOK] candidate 9 fsp=0.574800 adv_acc=6.9100
+2026-05-18 11:18:55,305 [FSP-HOOK] evaluating sampled candidate 10/20 score=0.658234
+2026-05-18 11:19:56,405 [FSP-HOOK] candidate 10 fsp=2.455878 adv_acc=6.1600
+2026-05-18 11:19:56,407 [FSP-HOOK] evaluating sampled candidate 11/20 score=0.658336
+2026-05-18 11:20:58,507 [FSP-HOOK] candidate 11 fsp=1.275772 adv_acc=5.7400
+2026-05-18 11:20:58,509 [FSP-HOOK] evaluating sampled candidate 12/20 score=0.657568
+2026-05-18 11:21:59,755 [FSP-HOOK] candidate 12 fsp=0.209973 adv_acc=4.6100
+2026-05-18 11:21:59,757 [FSP-HOOK] evaluating sampled candidate 13/20 score=0.657737
+2026-05-18 11:23:01,696 [FSP-HOOK] candidate 13 fsp=0.255588 adv_acc=4.1900
+2026-05-18 11:23:01,698 [FSP-HOOK] evaluating sampled candidate 14/20 score=0.659093
+2026-05-18 11:24:03,548 [FSP-HOOK] candidate 14 fsp=6.962386 adv_acc=5.6000
+2026-05-18 11:24:03,550 [FSP-HOOK] evaluating sampled candidate 15/20 score=0.659153
+2026-05-18 11:25:06,008 [FSP-HOOK] candidate 15 fsp=15.478332 adv_acc=7.2400
+2026-05-18 11:25:06,010 [FSP-HOOK] evaluating sampled candidate 16/20 score=0.658340
+2026-05-18 11:26:07,219 [FSP-HOOK] candidate 16 fsp=0.303665 adv_acc=5.3900
+2026-05-18 11:26:07,221 [FSP-HOOK] evaluating sampled candidate 17/20 score=0.658631
+2026-05-18 11:27:09,187 [FSP-HOOK] candidate 17 fsp=0.585598 adv_acc=6.2900
+2026-05-18 11:27:09,189 [FSP-HOOK] evaluating sampled candidate 18/20 score=0.657482
+2026-05-18 11:28:10,342 [FSP-HOOK] candidate 18 fsp=1.983463 adv_acc=6.4200
+2026-05-18 11:28:10,344 [FSP-HOOK] evaluating sampled candidate 19/20 score=0.657905
+2026-05-18 11:29:11,192 [FSP-HOOK] candidate 19 fsp=0.577942 adv_acc=5.1800
+2026-05-18 11:29:11,193 [FSP-HOOK] evaluating sampled candidate 20/20 score=0.658535
+2026-05-18 11:30:13,580 [FSP-HOOK] candidate 20 fsp=1.381908 adv_acc=5.4400
+2026-05-18 11:30:13,582 [FSP-HOOK] selected 5 / 20 candidates
+2026-05-18 11:30:13,585 [FSP-BONUS] alpha_normal: mean=0.003571 max=0.050000 nz=0.1161 flip=0(0.0000) | alpha_reduce: mean=0.003571 max=0.050000 nz=0.1339 flip=1(0.0714)
+2026-05-18 11:30:13,585 [FSP-BONUS] beta_normal: mean=0.005714 max=0.010000 nz=0.7143 flip=0(0.0000) | beta_reduce: mean=0.005714 max=0.010000 nz=0.6429 flip=0(0.0000)
+2026-05-18 11:30:13,586 [FSP-HOOK] done: selected=5/20
+2026-05-18 11:30:13,847 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:30:13,848 epoch 17 lr 1.825298e-02
+2026-05-18 11:30:13,848 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:30:14,516 ARCH STEP | Δalpha=0.000360 Δbeta=0.000479
+2026-05-18 11:30:14,859 train 000 5.790597e-01 80.859375 96.875000
+2026-05-18 11:30:49,506 ARCH STEP | Δalpha=0.000321 Δbeta=0.000435
+2026-05-18 11:30:49,852 train 050 5.533034e-01 80.568321 99.180453
+2026-05-18 11:31:22,584 train_acc 80.764000
+2026-05-18 11:31:22,748 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:31:22,749 epoch 18 lr 1.400559e-02
+2026-05-18 11:31:22,749 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:31:23,306 ARCH STEP | Δalpha=0.000271 Δbeta=0.000421
+2026-05-18 11:31:23,649 train 000 5.736774e-01 82.812500 98.437500
+2026-05-18 11:31:58,407 ARCH STEP | Δalpha=0.000337 Δbeta=0.000156
+2026-05-18 11:31:58,753 train 050 5.155206e-01 82.038909 99.371936
+2026-05-18 11:32:31,460 train_acc 81.588000
+2026-05-18 11:32:31,716 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:32:31,721 epoch 19 lr 1.029335e-02
+2026-05-18 11:32:31,722 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_5x5', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:32:32,298 ARCH STEP | Δalpha=0.000422 Δbeta=0.000306
+2026-05-18 11:32:32,652 train 000 5.382392e-01 82.031250 98.828125
+2026-05-18 11:33:07,485 ARCH STEP | Δalpha=0.000358 Δbeta=0.000361
+2026-05-18 11:33:07,834 train 050 5.099390e-01 82.169118 99.226409
+2026-05-18 11:33:40,678 train_acc 82.104000
+2026-05-18 11:33:40,843 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:33:40,846 epoch 20 lr 7.167533e-03
+2026-05-18 11:33:40,846 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('dil_conv_5x5', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('max_pool_3x3', 1), ('dil_conv_5x5', 3)], reduce_concat=range(2, 6))
+2026-05-18 11:33:41,406 ARCH STEP | Δalpha=0.000281 Δbeta=0.000364
+2026-05-18 11:33:41,750 train 000 5.142105e-01 82.421875 99.609375
+2026-05-18 11:34:16,509 ARCH STEP | Δalpha=0.000338 Δbeta=0.000227
+2026-05-18 11:34:16,931 train 050 4.859217e-01 83.072917 99.410233
+2026-05-18 11:34:49,803 train_acc 82.724000
+2026-05-18 11:34:49,972 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:34:49,975 epoch 21 lr 4.668908e-03
+2026-05-18 11:34:49,975 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:34:50,538 ARCH STEP | Δalpha=0.000269 Δbeta=0.000285
+2026-05-18 11:34:50,881 train 000 4.581525e-01 83.984375 99.218750
+2026-05-18 11:35:25,663 ARCH STEP | Δalpha=0.000372 Δbeta=0.000357
+2026-05-18 11:35:26,012 train 050 4.767817e-01 83.195466 99.471507
+2026-05-18 11:35:58,996 train_acc 83.400000
+2026-05-18 11:35:59,162 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:35:59,164 epoch 22 lr 2.824915e-03
+2026-05-18 11:35:59,164 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:35:59,729 ARCH STEP | Δalpha=0.000282 Δbeta=0.000143
+2026-05-18 11:36:00,072 train 000 4.421766e-01 83.984375 99.609375
+2026-05-18 11:36:34,819 ARCH STEP | Δalpha=0.000300 Δbeta=0.000237
+2026-05-18 11:36:35,166 train 050 4.699476e-01 83.471201 99.463848
+2026-05-18 11:37:08,097 train_acc 83.560000
+2026-05-18 11:37:08,098 [FSP-HOOK] start epoch=22
+2026-05-18 11:37:09,295 [FSP-HOOK] evaluating sampled candidate 1/20 score=0.702173
+2026-05-18 11:38:09,352 [FSP-HOOK] candidate 1 fsp=0.199795 adv_acc=4.6700
+2026-05-18 11:38:09,353 [FSP-HOOK] evaluating sampled candidate 2/20 score=0.707118
+2026-05-18 11:39:10,304 [FSP-HOOK] candidate 2 fsp=1.345960 adv_acc=6.6200
+2026-05-18 11:39:10,306 [FSP-HOOK] evaluating sampled candidate 3/20 score=0.713030
+2026-05-18 11:40:10,205 [FSP-HOOK] candidate 3 fsp=0.274814 adv_acc=5.8400
+2026-05-18 11:40:10,207 [FSP-HOOK] evaluating sampled candidate 4/20 score=0.702031
+2026-05-18 11:41:11,867 [FSP-HOOK] candidate 4 fsp=0.348110 adv_acc=6.3000
+2026-05-18 11:41:11,869 [FSP-HOOK] evaluating sampled candidate 5/20 score=0.707351
+2026-05-18 11:42:14,367 [FSP-HOOK] candidate 5 fsp=0.261143 adv_acc=6.1300
+2026-05-18 11:42:14,368 [FSP-HOOK] evaluating sampled candidate 6/20 score=0.711319
+2026-05-18 11:43:16,875 [FSP-HOOK] candidate 6 fsp=2.632995 adv_acc=5.3400
+2026-05-18 11:43:16,876 [FSP-HOOK] evaluating sampled candidate 7/20 score=0.706465
+2026-05-18 11:44:15,473 [FSP-HOOK] candidate 7 fsp=0.287553 adv_acc=4.7700
+2026-05-18 11:44:15,474 [FSP-HOOK] evaluating sampled candidate 8/20 score=0.706159
+2026-05-18 11:45:13,710 [FSP-HOOK] candidate 8 fsp=0.408063 adv_acc=6.5600
+2026-05-18 11:45:13,711 [FSP-HOOK] evaluating sampled candidate 9/20 score=0.715473
+2026-05-18 11:46:16,925 [FSP-HOOK] candidate 9 fsp=0.346943 adv_acc=6.6800
+2026-05-18 11:46:16,926 [FSP-HOOK] evaluating sampled candidate 10/20 score=0.710511
+2026-05-18 11:47:17,265 [FSP-HOOK] candidate 10 fsp=0.239212 adv_acc=5.5800
+2026-05-18 11:47:17,267 [FSP-HOOK] evaluating sampled candidate 11/20 score=0.711727
+2026-05-18 11:48:20,290 [FSP-HOOK] candidate 11 fsp=1.335746 adv_acc=5.4700
+2026-05-18 11:48:20,292 [FSP-HOOK] evaluating sampled candidate 12/20 score=0.708344
+2026-05-18 11:49:22,897 [FSP-HOOK] candidate 12 fsp=0.145141 adv_acc=4.4500
+2026-05-18 11:49:22,898 [FSP-HOOK] evaluating sampled candidate 13/20 score=0.711145
+2026-05-18 11:50:25,295 [FSP-HOOK] candidate 13 fsp=2.226240 adv_acc=5.9700
+2026-05-18 11:50:25,296 [FSP-HOOK] evaluating sampled candidate 14/20 score=0.709724
+2026-05-18 11:51:26,726 [FSP-HOOK] candidate 14 fsp=0.211250 adv_acc=4.8900
+2026-05-18 11:51:26,727 [FSP-HOOK] evaluating sampled candidate 15/20 score=0.708915
+2026-05-18 11:52:25,241 [FSP-HOOK] candidate 15 fsp=0.426392 adv_acc=5.5700
+2026-05-18 11:52:25,243 [FSP-HOOK] evaluating sampled candidate 16/20 score=0.712129
+2026-05-18 11:53:26,618 [FSP-HOOK] candidate 16 fsp=1.334176 adv_acc=5.4100
+2026-05-18 11:53:26,619 [FSP-HOOK] evaluating sampled candidate 17/20 score=0.706672
+2026-05-18 11:54:27,732 [FSP-HOOK] candidate 17 fsp=1.830102 adv_acc=4.4800
+2026-05-18 11:54:27,733 [FSP-HOOK] evaluating sampled candidate 18/20 score=0.704889
+2026-05-18 11:55:32,905 [FSP-HOOK] candidate 18 fsp=3.950504 adv_acc=4.8800
+2026-05-18 11:55:32,907 [FSP-HOOK] evaluating sampled candidate 19/20 score=0.706608
+2026-05-18 11:56:40,653 [FSP-HOOK] candidate 19 fsp=0.372937 adv_acc=6.0600
+2026-05-18 11:56:40,655 [FSP-HOOK] evaluating sampled candidate 20/20 score=0.706269
+2026-05-18 11:57:46,636 [FSP-HOOK] candidate 20 fsp=0.846224 adv_acc=5.7100
+2026-05-18 11:57:46,637 [FSP-HOOK] selected 5 / 20 candidates
+2026-05-18 11:57:46,640 [FSP-BONUS] alpha_normal: mean=0.003571 max=0.050000 nz=0.1250 flip=1(0.0714) | alpha_reduce: mean=0.003571 max=0.050000 nz=0.1339 flip=1(0.0714)
+2026-05-18 11:57:46,640 [FSP-BONUS] beta_normal: mean=0.005714 max=0.010000 nz=0.7143 flip=0(0.0000) | beta_reduce: mean=0.005714 max=0.010000 nz=0.6429 flip=0(0.0000)
+2026-05-18 11:57:46,641 [FSP-HOOK] done: selected=5/20
+2026-05-18 11:57:46,815 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:57:46,817 epoch 23 lr 1.643187e-03
+2026-05-18 11:57:46,818 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:57:47,517 ARCH STEP | Δalpha=0.000407 Δbeta=0.000475
+2026-05-18 11:57:47,861 train 000 4.646220e-01 84.765625 98.046875
+2026-05-18 11:58:23,349 ARCH STEP | Δalpha=0.000303 Δbeta=0.000343
+2026-05-18 11:58:23,707 train 050 4.450269e-01 84.581801 99.486826
+2026-05-18 11:58:57,316 train_acc 84.904000
+2026-05-18 11:58:57,598 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('skip_connect', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:58:57,601 epoch 24 lr 1.090558e-03
+2026-05-18 11:58:57,601 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_5x5', 3)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('skip_connect', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 11:58:58,201 ARCH STEP | Δalpha=0.000282 Δbeta=0.000350
+2026-05-18 11:58:58,556 train 000 4.720828e-01 85.546875 98.437500
+2026-05-18 11:59:34,117 ARCH STEP | Δalpha=0.000349 Δbeta=0.000202
+2026-05-18 11:59:34,475 train 050 4.293181e-01 84.880515 99.540441
+2026-05-18 12:00:08,062 train_acc 84.904000
+2026-05-18 12:00:08,236 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 12:00:08,238 epoch 25 lr 1.000000e-03
+2026-05-18 12:00:08,239 genotype = Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('dil_conv_5x5', 2), ('sep_conv_5x5', 3), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))
+2026-05-18 12:00:08,839 ARCH STEP | Δalpha=0.000328 Δbeta=0.000248
+2026-05-18 12:00:09,194 train 000 4.442289e-01 86.328125 98.828125
+2026-05-18 12:00:44,737 ARCH STEP | Δalpha=0.000291 Δbeta=0.000182
+2026-05-18 12:00:45,095 train 050 4.393951e-01 84.865196 99.555760
+2026-05-18 12:01:18,640 train_acc 85.052000
+2026-05-18 12:01:18,843 valid 000 5.867911e-01 76.953125 100.000000
+2026-05-18 12:01:22,326 valid 050 5.666186e-01 80.606618 98.958333
+2026-05-18 12:01:25,637 valid_acc 80.404000
+2026-05-18 12:01:25,915 Final Genotype: Genotype(normal=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2), ('dil_conv_3x3', 3), ('sep_conv_3x3', 2), ('sep_conv_5x5', 0), ('sep_conv_3x3', 2)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 0), ('sep_conv_5x5', 1), ('sep_conv_5x5', 3), ('dil_conv_5x5', 2), ('dil_conv_5x5', 3), ('max_pool_3x3', 1)], reduce_concat=range(2, 6))

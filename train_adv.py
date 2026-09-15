@@ -21,6 +21,10 @@ from genotypes import Genotype
 from model import NetworkCIFAR as Network
 
 
+
+#adversarial training version of the original training process; the overall logic remains consistent.
+
+
 def get_cifar_dataset_class(dataset):
   dataset = dataset.lower()
   if dataset == 'cifar10':

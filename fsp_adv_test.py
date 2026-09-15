@@ -25,6 +25,7 @@ from fsp_test import (
     finetune_subnet,
 )
 
+#add adversarial fine-tuning based on fsp_test
 
 def get_cifar_dataset_class(dataset):
     dataset = dataset.lower()
@@ -55,6 +56,7 @@ def build_dataset(dataset, root, train, transform):
     )
 
 
+#generate adversarial examples for fine-tuning, logic consistent with AttackPGD. here might be duplicated
 @torch.enable_grad()
 def pgd_attack_train(model, images, labels, eps=8 / 255, alpha=2 / 255, steps=7, random_start=True):
     was_training = model.training
@@ -230,13 +232,11 @@ def main():
         num_workers=4
     )
 
-    #20% dataset
+    #partial dataset if needed
     if args.use_ft_subset:
         from fsp_search import FSPHookConfig, build_finetune_loader
 
         tmp_cfg = FSPHookConfig(
-            subset_ratio=1.0 / args.ft_subset_num_folds,
-            subset_fold_id=args.ft_subset_fold_id,
             subset_num_folds=args.ft_subset_num_folds,
             batch_size=args.batch_size,
             num_workers=4,

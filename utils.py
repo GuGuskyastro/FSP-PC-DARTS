@@ -5,7 +5,7 @@ import shutil
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 
-#10和100的mean/std
+# mean/std
 CIFAR10_MEAN = [0.49139968, 0.48215827, 0.44653124]
 CIFAR10_STD = [0.24703233, 0.24348505, 0.26158768]
 CIFAR100_MEAN = [0.50707459, 0.48654896, 0.44091788]
@@ -57,7 +57,7 @@ def accuracy(output, target, topk=(1,)):
 
   res = []
   for k in topk:
-    #修改view到reshape
+    # change view to reshape
     correct_k = correct[:k].reshape(-1).float().sum(0)
     res.append(correct_k.mul_(100.0/batch_size))
   return res
@@ -137,7 +137,7 @@ def drop_path(x, drop_prob):
     x.mul_(mask)
   return x
 
-#修改了log创建逻辑
+# change the log creation logic
 def create_exp_dir(path, scripts_to_save=None):
   os.makedirs(path, exist_ok=True)
   print('Experiment dir : {}'.format(path))

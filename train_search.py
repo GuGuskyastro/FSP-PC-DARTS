@@ -142,6 +142,7 @@ def main():
   indices = list(range(num_train))
   split = int(np.floor(args.train_portion * num_train))
 
+  # The dataset split here is the default PC-DARTS settings; FSP process does not create an additional validation set for evaluation yet
   train_queue = torch.utils.data.DataLoader(
       train_data, batch_size=args.batch_size,
       sampler=torch.utils.data.sampler.SubsetRandomSampler(indices[:split]),
@@ -208,6 +209,7 @@ def main():
 
     utils.save(model, os.path.join(args.save, 'weights.pt'))
 
+    # An addition to the original PC-DARTS; this is the final genotype.
     final_genotype = model.genotype()
     logging.info('Final Genotype: %s', final_genotype)
 

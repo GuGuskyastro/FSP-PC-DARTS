@@ -33,7 +33,7 @@ def load_genotype(path):
     return eval(genotype_str, {"Genotype": Genotype})
 
 
-#Normalize and make sure PGD in right scale
+#normalize and make sure PGD in right scale
 class NormalizeWrapper(nn.Module):
     def __init__(self, model, mean=None, std=None):
         super().__init__()
@@ -54,7 +54,7 @@ class NormalizeWrapper(nn.Module):
         return self.model(x)
 
 
-#PGD Attacker same in RobNet, but PGD-7 too strong here set 1
+#PGD attacke same in RobNet, but PGD-7 too strong here set 1 default
 class AttackPGD(nn.Module):
     def __init__(self, model, eps=8/255, alpha=2/255, steps=1,base_seed=42):
         super().__init__()
@@ -106,7 +106,7 @@ def compute_fsp_matrix(feature_in, feature_out):
     fsp = torch.bmm(f_in, f_out.transpose(1, 2)) / (H * W)
     return fsp
 
-
+#fsp distance
 def update_fsp_stats(fsp_stats, idx, fsp_clean, fsp_adv, mask=None):
 
     diff = (fsp_clean - fsp_adv) ** 2  # [B, Cin, Cout]
@@ -122,7 +122,7 @@ def update_fsp_stats(fsp_stats, idx, fsp_clean, fsp_adv, mask=None):
 
 
 
-#Set a hook for fsp computation
+#set a hook to get in/output for fsp computation
 features_buffer = {}
 
 def get_cell_hook(cell_index):
@@ -136,7 +136,7 @@ def get_cell_hook(cell_index):
     return hook
 
 
-#Select discrete subnet with the genotype
+#select discrete subnet with the genotype
 def apply_genotype_mask(model, genotype):
     name_to_idx = {name: i for i, name in enumerate(PRIMITIVES)}
 
@@ -375,7 +375,7 @@ def main():
                 #all input
                 update_fsp_stats(fsp_stats, idx, fsp_clean, fsp_adv, mask=None)
 
-                #clean-correct input
+                #clean-correct input / results show this is not the reason why the correlation cannot be seen.
                 update_fsp_stats(fsp_stats_clean_correct, idx, fsp_clean, fsp_adv, mask_clean_correct)
 
         #report

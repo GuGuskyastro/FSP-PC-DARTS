@@ -26,6 +26,7 @@ from fsp_test import (
 )
 from fsp_adv_test import adv_finetune_subnet
 
+# creat candidate pool, FSP evaluation , and update architecture parameters
 
 def get_cifar_dataset_class(dataset: str):
     dataset = dataset.lower()
@@ -65,8 +66,6 @@ class FSPHookConfig:
     per_edge_topops: int = 2
     per_node_topm: int = 3
 
-    subset_ratio: float = 0.2
-    subset_fold_id: int = 0
     subset_num_folds: int = 5
 
     batch_size: int = 256
@@ -112,7 +111,7 @@ def should_run_fsp_hook(epoch: int, cfg: FSPHookConfig) -> bool:
         return False
     return ((epoch - cfg.start_epoch) % cfg.interval_epochs) == 0
 
-
+# cut training set into small parts
 def build_stratified_fold_indices(dataset, num_folds=5, seed=0):
     if hasattr(dataset, "targets"):
         targets = np.array(dataset.targets)
@@ -162,7 +161,7 @@ def build_finetune_loader(cfg: FSPHookConfig, fold_id: int):
     )
     return loader
 
-
+# evaluation involves the test set; necessary to additionally split a new validation set from the training set.
 def build_eval_loader(cfg: FSPHookConfig):
     transform = transforms.Compose([transforms.ToTensor()])
     test_data = build_dataset(
@@ -186,7 +185,7 @@ def clear_discrete_mask(model):
         for op in cell._ops:
             op.selected_op = None
 
-
+#actually same with apply_genotype_mask; might redundant
 def apply_genotype_mask_inplace(model, genotype):
     op_to_idx = {name: i for i, name in enumerate(PRIMITIVES)}
 
@@ -295,7 +294,8 @@ def evaluate_one_candidate(supernet_model, genotype, ft_loader, eval_loader, dev
     eval_model = copy.deepcopy(supernet_model).to(device)
     eval_model.eval()
 
-    clear_discrete_mask(eval_model)
+    #The apply function directly set the mask, clear here redundant
+    #clear_discrete_mask(eval_model)
     apply_genotype_mask_inplace(eval_model, genotype)
 
     mean, std = utils.get_cifar_mean_std(cfg.dataset, mean=cfg.mean, std=cfg.std)
@@ -503,7 +503,7 @@ def run_fsp_guided_arch_update(model, epoch, device, cfg: FSPHookConfig, logger=
     bonus_maps = build_bonus_maps(model, selected)
     bonus_stats = apply_arch_bonus(model, bonus_maps, cfg)
 
-    #print changes
+    #print changes, simply to see if there are any changes with fsp process
     logger.info(
         "[FSP-BONUS] alpha_normal: mean=%.6f max=%.6f nz=%.4f flip=%d(%.4f) | "
         "alpha_reduce: mean=%.6f max=%.6f nz=%.4f flip=%d(%.4f)",

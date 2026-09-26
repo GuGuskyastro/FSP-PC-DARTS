@@ -36,6 +36,6 @@ The FSP evaluation can be enabled by running `train_search.py` with the `--fsp_h
 
 By running `fsp_adv_test.py` with the paths of the genotype and weight files, you can obtain a rough estimate of the FSP distance and robustness of the current discrete architecture without performing full training.
 
-Full adversarial training can be performed `using train_adv.py`, and the final robustness evaluation results can then be obtained with `final_test.py`.
+Full adversarial training can be performed using `train_adv.py`, and the final robustness evaluation results can then be obtained with `final_test.py`.
 
 

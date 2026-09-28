@@ -5,7 +5,7 @@ import shutil
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 
-# mean/std
+# mean/std; see mean_std.py
 CIFAR10_MEAN = [0.49139968, 0.48215827, 0.44653124]
 CIFAR10_STD = [0.24703233, 0.24348505, 0.26158768]
 CIFAR100_MEAN = [0.50707459, 0.48654896, 0.44091788]
